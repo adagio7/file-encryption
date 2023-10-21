@@ -1,5 +1,7 @@
 #include <string>
 #include <fstream>
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
 
 using namespace std;
 
@@ -11,6 +13,8 @@ class FileEncrypter{
         ifstream file(path);
         return file.good();
     }
+
+    string kdf(string password, string salt, int iterations, int keyLength);
 
     int generateKey();
 

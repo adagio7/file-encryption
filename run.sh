@@ -19,7 +19,7 @@ fi
 mkdir -p build
 cd build
 
-cmake ..
+cmake -DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@3/3.1.3 -DOPENSSL_LIBRARIES=/opt/homebrew/Cellar/openssl@3/3.1.3/lib ..
 make
 
 if [[ $mode == "test" ]]; then

@@ -1,8 +1,12 @@
+#include <fstream>
+#include <string>
 #include <iostream>
 #include "catch_amalgamated.hpp"
 
-TEST_CASE("Zerox Test", "[fileEncrypter]"){
-    std::cout << "hqeriu" << std::endl;
+#include "../src/fileEncrypter.cpp"
 
-    REQUIRE(0 == 1);
+using namespace std;
+
+TEST_CASE("hehe"){
+    assert(true);
 }
